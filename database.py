@@ -26,9 +26,10 @@ while(True):
         print("this action will delete the data from the database")
         dl=int(input("enter roll no."))
         for dle in range(len(student)):
-            if(dl==student[dle]["ID"]):
-                print("found")
-                student.remove(dle)
+            for ind in student:
+                if(dl==student[dle]["ID"]):
+                    print("found")
+                    student.pop(dle)
         # for dle in range(len(student)):
         #     for dl in student:
         #         if(dl==student[dle]["ID"]):
